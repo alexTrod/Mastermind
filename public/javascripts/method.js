@@ -158,7 +158,9 @@ function pegsToStyle(){
     }
 }
 
-
+function messageFill(str){
+    $(".messageBox").text(str);
+}
 
 function removeAllGuessColumn(){
     for(let i = 0;i<=4;i++){
@@ -173,14 +175,37 @@ function changeBoardColors(){
     } 
 }
 
-
+function disableBoard(){
+    //POP-UP SHOWS UP, PLAYER A have to chose a combination
+}
 //Win function
 
 
-//Document ready : 
+//Set UP 
+(function setup(){
+    var socket = new WebSocket("ws://127.0.0.1:2500");
+    socket.onopen = function(){
+        messageFill("Wait another player...");
+        console.log("A web socket connection was opened");
+    }
 
-$(function(){
-    timer();
-    addClickColor();
-    addClickRemover();    
-});
+    socket.onmessage = function(event){
+        let incomingMsg = JSON.parse(event.data);
+        if (incomingMsg.type == Messages.T_PLAYER_TYPE) {
+            let letter = incomingMsg.data;
+            if(letter == "A"){
+                messageFill("You are the code make, make a code...");
+                timer();
+                disableBoard();
+                showChoser();
+                sendCombination();
+            }
+            else{       //letter = B
+                messageFill("You are the code breaker");
+                timer(); 
+                addClickColor();
+                addClickRemover();    
+            }
+        }
+    }
+})();
