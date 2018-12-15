@@ -6,6 +6,7 @@ var messages = require("./public/javascripts/messages");
 var indexRouter = require("./routes/index");
 var gameStatus = require("./statTracker");
 
+
 var port = process.argv[2];
 var app = express();
 
@@ -49,16 +50,13 @@ wss.on("connection", function connection(ws) {
 
     let con = ws;
     con.id = connectionID++;
-    console.log("con.id = "+con.id);
     let playerType = currentGame.addPlayer(con);
     websockets[con.id] = currentGame;
 
     console.log("Player %s placed in game %s as %s", con.id, currentGame.id, playerType);
     
     // Inform the player which type he is
-    
-    //con.send((playerType == "A") ? messages.S_PLAYER_A : messages.S_PLAYER_B);
-
+    con.send((playerType == "A") ? messages.S_playerTypeA : messages.S_playerTypeB);
     //client B receives the target word (if already available)
      
     if(playerType == "B" && currentGame.solutionToGuess==null){
