@@ -27,10 +27,10 @@ let oponentPegs = {
 }
 
 let gameSolution = {
-   color0:"Red",
-   color1:"Red",
-   color2:"Red",
-   color3:"Orange"
+   color0:null,
+   color1:null,
+   color2:null,
+   color3:null
 }
 
 let currentGuess = {
@@ -47,4 +47,5 @@ let oldGuess = [
     {color3:[]}
 ]
 //Game state variables
+var letter = null;
 var column = 0;
