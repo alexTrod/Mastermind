@@ -1,11 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Chakra+Petch');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100');
-
 
 body{
     background-color:rgb(30, 30, 70);
-    animation: change-background 15s ease infinite;
-} 
+    animation: change-background 45s ease infinite;
+  } 
+  
+  @keyframes change-background {
+    0% {
+        background:#feca57;
+    }
+    20% {
+        background: #ff6b6b;
+    }
+    40% {
+        background: #48dbfb;
+    }
+    60%{
+        background:#1dd1a1;
+    }    
+    80%{
+        background:#1dd1a1;
+    }
+      
+    100%{
+        background:#feca57;
+    }
+}
 header{
     width:100%;
     font-family : 'Chakra Petch', Arial;
@@ -29,6 +48,11 @@ h1{
     top:10px;
 }
 
+.buttonStart:hover, .buttonHowTo:hover{
+    background-color:rgb(255, 103, 76);
+    cursor:pointer;
+    transition: background-color 1s;
+}
 .buttonStart, .buttonHowTo{
     background-color:rgb(255, 72, 72);
     color:rgb(255, 246, 167);
@@ -44,12 +68,6 @@ h1{
     box-shadow: -5px -5px 0px 0px rgba(160, 40, 40, 0.75);
     transition: background-color 1s;
 }
-.buttonStart:hover, .buttonHowTo:hover{
-    background-color:rgb(255, 103, 76);
-    cursor:pointer;
-    transition: background-color 1s;
-}
-
 .buttonStart:active, .buttonHowTo:active{
     -webkit-box-shadow:unset;
     -moz-box-shadow:unset;
@@ -76,26 +94,3 @@ footer{
 .credits::after{
     content:"Alex and Rowdey";
 }
-
-@keyframes change-background {
-    0% {
-        background: #405a6b;
-    }
-    20% {
-        background: #642d2d;
-    }
-    40% {
-        background: #2b7a38;
-    }
-    60%{
-        background:#3d7792;
-    }    
-    80%{
-        background:#a84747;
-    }
-      
-    100%{
-        background:#405a6b;
-    }
-  }
-  
