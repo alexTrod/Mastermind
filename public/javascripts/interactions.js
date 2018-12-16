@@ -119,8 +119,8 @@ function sendGameSolution(){
             }
             timer();
         }
-    }
-    socket.onclose = function(){
+    };
+  socket.onclose = function(){
     if(winner == null){
        messageFill("Aborted");
     }
