@@ -14,7 +14,9 @@ function colorPicker(colorPick){
     "use strict";
     let curColor = colors[colorPick];
     let curRowPicker = currentRowPicker();
-    $(".tdGuessColumn"+curRowPicker).css("color",curColor);
+    console.log(currentRowPicker());
+    console.log(curColor);
+    $(".tdGuessColumn"+curRowPicker+">div>div").css("color",curColor);
     currentGuess["color"+curRowPicker] = curColor;
     return true;
 }
@@ -25,11 +27,11 @@ function addClickColor(){
         $(".tdColorPicker"+i).click(function() {
             colorPicker(i);
         });
-        $(".tdColorPicker"+i).css("color", colors[i]);
+        $(".tdColorPicker"+i+">div>div").css("color", colors[i]);
     }
 }
 function colorRemover(i){
-    $(".tdGuessColumn"+i).css("color","black");
+    $(".tdGuessColumn"+i+">div>div").css("color","white");
     currentGuess["color"+i] = null;
 }
 function addClickRemover(){
@@ -41,6 +43,7 @@ function addClickRemover(){
 }
 
 function rowsFilled(){
+    "use strict";
     for(let i = 0;i<4;i++){
         if(currentGuess["color"+i]==null){
             return false;
@@ -171,7 +174,7 @@ function removeAllGuessColumn(){
 function changeBoardColors(){
     let curColumn = column +2;
     for(var i = 0;i<4;i++){
-        $(".tdCircles"+curColumn+"_"+i).css("color",currentGuess["color"+i]);
+        $(".tdCircles"+curColumn+"_"+i + ">div>div").css("color",currentGuess["color"+i]);
     } 
 }
 
@@ -180,32 +183,17 @@ function disableBoard(){
 }
 //Win function
 
+/*
+$(function(){
+    timer(); 
+    addClickColor();
+    addClickRemover();    
+})();
+*/
 
-//Set UP 
-(function setup(){
-    var socket = new WebSocket("ws://127.0.0.1:2500");
-    socket.onopen = function(){
-        messageFill("Wait another player...");
-        console.log("A web socket connection was opened");
-    }
 
-    socket.onmessage = function(event){
-        let incomingMsg = JSON.parse(event.data);
-        if (incomingMsg.type == Messages.T_PLAYER_TYPE) {
-            let letter = incomingMsg.data;
-            if(letter == "A"){
-                messageFill("You are the code make, make a code...");
-                timer();
-                disableBoard();
-                showChoser();
-                sendCombination();
-            }
-            else{       //letter = B
-                messageFill("You are the code breaker");
-                timer(); 
-                addClickColor();
-                addClickRemover();    
-            }
-        }
-    }
+(function test(){
+    addClickColor();
+    addClickRemover();    
+    enableMastermindBoard();
 })();
