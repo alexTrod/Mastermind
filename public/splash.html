@@ -3,21 +3,34 @@
     <head>
         <meta charset="utf-8">
         <title>Splashcreen</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/splash.css">
     </head>
     <body>
         <header>
             <div>
                 <h4>Online players : <a>5</a></h4>
                 <h4>Games completed : <a>15</a></h4>
+            </div>
             <div>
                 <h4>Time used expanding the mind : <a>3 h</a></h4>
-            <div>
+            </div>
+        </header>
         <main>
-            <h1>MASTERMIND</h1>
-            <div>
-                <button><h3>Start</h3></button>
-                <button><h3>How to play</h3></button>                
+            <h1>MAΣTERMINΔ</h1>
+            <div class="buttonsBox">
+                <form action="/game" method="GET">
+                    <button type="submit" class="buttonStart">
+                        <h3>Start</h3>
+                    </button>
+                </form>
+                    <button class="buttonHowTo">
+                        <h3>How to play</h3>
+                    </button>
             </div>
         </main>
+        <footer>
+            <div class="credits">
+            </div>
+        </footer>
     </body>
 </html>
