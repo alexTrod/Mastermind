@@ -1,5 +1,3 @@
-var gameStats = require("./statTracker");
-
 function currentRowPicker(){
     "use strict";
     let i = 0;
@@ -57,7 +55,6 @@ function timer(){
     var sec = $(".sec");
     var id = setInterval(function(){ 
         secs++;
-        gameStats.gamesTime++;
         if(secs> 1){
             var minutes = Math.floor(secs/60) < 10 ? "0"+Math.floor(secs/60) : Math.floor(secs/60);
             var seconds = secs%60<10 ? "0"+secs%60 : secs%60;
