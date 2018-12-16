@@ -9,4 +9,4 @@ var gameStatus = {
     gamesInitialized : 0      /* Time spent playing the game */
 };
 
-module.exports = gameStats;
+module.exports = gameStatus;
