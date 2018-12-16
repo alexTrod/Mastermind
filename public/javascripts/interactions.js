@@ -94,14 +94,12 @@ function sendGameSolution(){
             winner = incomingMsg.data;
             if (winner = "A" && letter == "A") {
                 messageFill("You won!");
-                gameStats.gamesWonCM++
             }
             if (winner = "A" && letter == "A") {
                 messageFill("You lost!");
             }
             if (winner = "B" && letter == "B") {
                 messageFill("You won!");
-                gameStats.gamesWonCB++
             }
             if (winner = "A" && letter == "B") {
                  messageFill("You lost!");      
