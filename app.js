@@ -59,11 +59,11 @@ wss.on("connection", function connection(ws) {
     con.send((playerType == "A") ? messages.S_playerTypeA : messages.S_playerTypeB);
     //client B receives the target word (if already available)
      
-    if(playerType == "B" && currentGame.solutionToGuess==null){
-        /*let msg = messages.O_TARGET_WORD;
-        msg.data = currentGame.solutionToGuess();
+    if(playerType == "B" && currentGame.solutionToGuess!=null){
+        let msg = messages.gameSolution;
+        msg.data = currentGame.solutionToGuess;
         con.send(JSON.stringify(msg));
-        */
+        
        console.log("Solution is sent");
     }
     
@@ -73,8 +73,18 @@ wss.on("connection", function connection(ws) {
         currentGame = new Game(gameStatus.gamesInitialized++);
         console.log("Two players are connected to a new game");
     }
-
     //Message part to implement (abort / Win-lose)
+
+    con.on("message", function incoming(message) {
+        let msg = JSON.parse(message);
+        console.log(message);
+        if(msg.type == messages.gameSolutionType){
+            currentGame.solutionToGuess = msg.solutionChoice; 
+            messages.gameSolution.solutionChoice = currentGame.solutionToGuess;
+            con.send(JSON.stringify( messages.gameSolution));
+        }
+    });
+
     //Close Part to implement
 
 });
