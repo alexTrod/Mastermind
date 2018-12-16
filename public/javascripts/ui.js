@@ -49,3 +49,4 @@ let oldGuess = [
 //Game state variables
 var letter = null;
 var column = 0;
+var winner = null;
