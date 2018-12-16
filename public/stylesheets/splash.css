@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+
+body{
+    background-color:rgb(30, 30, 70);
+    animation: change-background 15s ease infinite;
+} 
+header{
+    width:100%;
+    font-family : 'Chakra Petch', Arial;
+    font-size:20px;
+    color :white;
+    display:flex;
+    justify-content: space-between;
+}
+header div{
+    margin-left:30px;
+    margin-right:30px;
+}
+h1{
+    color :  rgb(251, 233, 64);
+    font-size:100px;
+    font-weight:100;
+    width:100%;
+    font-family:'Roboto';
+    text-align: center;
+    position:relative;
+    top:10px;
+}
+
+.buttonStart, .buttonHowTo{
+    background-color:rgb(255, 72, 72);
+    color:rgb(255, 246, 167);
+    font-size:20px;
+    font-family: 'Chakra Petch';
+    padding-left:40px;
+    padding-right:40px;
+    border:0px;
+    height:80px;
+    border:2px solid rgba(160, 40, 40,0.75);
+    -webkit-box-shadow: -5px -5px 0px 0px rgba(160, 40, 40,0.75);
+    -moz-box-shadow: -5px -5px 0px 0px rgba(160, 40, 40,0.75);
+    box-shadow: -5px -5px 0px 0px rgba(160, 40, 40, 0.75);
+    transition: background-color 1s;
+}
+.buttonStart:hover, .buttonHowTo:hover{
+    background-color:rgb(255, 103, 76);
+    cursor:pointer;
+    transition: background-color 1s;
+}
+
+.buttonStart:active, .buttonHowTo:active{
+    -webkit-box-shadow:unset;
+    -moz-box-shadow:unset;
+    box-shadow: unset;
+    cursor:pointer;
+    position:relative;
+    bottom:5px;
+    right:5px;
+}
+.buttonsBox{
+    display:flex;
+    justify-content: space-around;
+}
+footer{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    color:white;
+    font-family:'Chakra Petch';
+}
+.credits::before{
+    content:"Credits : ";
+}
+.credits::after{
+    content:"Alex and Rowdey";
+}
+
+@keyframes change-background {
+    0% {
+        background: #405a6b;
+    }
+    20% {
+        background: #642d2d;
+    }
+    40% {
+        background: #2b7a38;
+    }
+    60%{
+        background:#3d7792;
+    }    
+    80%{
+        background:#a84747;
+    }
+      
+    100%{
+        background:#405a6b;
+    }
+  }
+  
