@@ -88,7 +88,19 @@ function sendGameSolution(){
             }
             else{       //letter = B
                 messageFill("You are the code breaker... The code maker is making the code...");
-               
+         
+        if (incomingMsg == Messages.gameWonBy) {
+            winner = incomingMsg.data;
+            if (winner = "A" && letter == "A") {
+                messageFill("You won!");
+                gameStats.gamesWonCM++
+            if (winner = "A" && letter == "A") {
+                messageFill("You lost!");
+            if (winner = "B" && letter == "B") {
+                messageFill("You won!");
+                gameStats.gamesWonCB++
+             if (winner = "A" && letter == "B") {
+                 messageFill("You lost!");      
             }
         }
         if(incomingMsg.type == Messages.gameSolutionType){ //handle gameSolution
