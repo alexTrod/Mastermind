@@ -1,13 +1,15 @@
 (function(exports){
-
+    exports.gameSolutionType = "GAME Solution";
     exports.gameSolution = {
+        type : exports.gameSolutionType,
         solutionChoice : {
             color0:null, 
             color1:null,
             color2:null, 
-            color3:null}
+            color3:null
+        }
     }    
-    exports.S_gameSolution = JSON.stringigy(exports.gameSolution);
+    exports.S_gameSolution = JSON.stringify(exports.gameSolution);
 
   
     exports.PlayerType = "PLAYER-TYPE";
@@ -47,4 +49,4 @@
         data : "B"                                                              
     }
     exports.S_gameWinnerB = JSON.stringify(exports.gameWinnerB);
-    }(typeof exports === 'undefined' ? this.utilities = {} : exports));
+    }(typeof exports === 'undefined' ? this.Messages = {} : exports));
