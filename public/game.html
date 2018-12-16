@@ -2,119 +2,124 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Mastermind - webgame</title>
+        <title>MAΣTERMINΔ - webgame</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css">    </head>
+        <link rel="stylesheet" type="text/css" href="stylesheets/game.css">
     <body>
         <header>
             <div>
-                <h3>Mastermind</h3>
-                <!--<img src="logo.gif" alt="Logo">-->
-                <button onclick="document.location.href = 'splash';"><h3>Log out</h3></button>
+                <h3 class="title">MAΣTERMINΔ</h3>           
+                <div class="timer"> <!--footer-->
+                    <div> <!--Timer-->
+                        <h4><a class="min">00</a>:<a class="sec">00</a></h4>
+                    </div>                          
+                </div>                <!--<img src="logo.gif" alt="Logo">-->
+                <button class="buttonLogOut"onclick="document.location.href = 'splash';"><img class="logOut" alt="Log Out" src="images/logOut.png"></button>
             </div>
-            <div class="messageBox"></div>
         </header>
         <main>
-        <table class="tableMastermind" border="1">
+        <div class="messageBox"></div>
+        <table class="tableMastermind">
             <tr class="trPegs">
                 <td class="tdPegs tdPegs10">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg9_0">&#9679</span>
-                        <span class="peg2 peg9_1">&#9679</span>
+                        <span class="peg1 peg9_0">&#9675</span>
+                        <span class="peg2 peg9_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg9_2">&#9679</span>
-                        <span class="peg4 peg9_3">&#9679</span>
+                        <span class="peg3 peg9_2">&#9675</span>
+                        <span class="peg4 peg9_3">&#9675</span>
                     </div> 
                 </td>
                 <td class="tdPegs tdPegs9">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg8_0">&#9679</span>
-                        <span class="peg2 peg8_1">&#9679</span>
+                        <span class="peg1 peg8_0">&#9675</span>
+                        <span class="peg2 peg8_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg8_2">&#9679</span>
-                        <span class="peg4 peg8_3">&#9679</span>
+                        <span class="peg3 peg8_2">&#9675</span>
+                        <span class="peg4 peg8_3">&#9675</span>
                     </div> 
                 </td>
                 <td class="tdPegs tdPegs8">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg7_0">&#9679</span>
-                        <span class="peg2 peg7_1">&#9679</span>
+                        <span class="peg1 peg7_0">&#9675</span>
+                        <span class="peg2 peg7_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg7_2">&#9679</span>
-                        <span class="peg4 peg7_3">&#9679</span>
+                        <span class="peg3 peg7_2">&#9675</span>
+                        <span class="peg4 peg7_3">&#9675</span>
                     </div> 
                 </td>
                 <td class="tdPegs tdPeg7">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg6_0">&#9679</span>
-                        <span class="peg2 peg6_1">&#9679</span>
+                        <span class="peg1 peg6_0">&#9675</span>
+                        <span class="peg2 peg6_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg6_2">&#9679</span>
-                        <span class="peg4 peg6_3">&#9679</span>
+                        <span class="peg3 peg6_2">&#9675</span>
+                        <span class="peg4 peg6_3">&#9675</span>
                     </div> 
                 </td>                              
                 <td class="tdPegs tdPegs6">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg5_0">&#9679</span>
-                        <span class="peg2 peg5_1">&#9679</span>
+                        <span class="peg1 peg5_0">&#9675</span>
+                        <span class="peg2 peg5_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg5_2">&#9679</span>
-                        <span class="peg4 peg5_3">&#9679</span>
+                        <span class="peg3 peg5_2">&#9675</span>
+                        <span class="peg4 peg5_3">&#9675</span>
                     </div> 
                 </td>
                 <td class="tdPegs tdPegs5">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg4_0">&#9679</span>
-                        <span class="peg2 peg4_1">&#9679</span>
+                        <span class="peg1 peg4_0">&#9675</span>
+                        <span class="peg2 peg4_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg4_2">&#9679</span>
-                        <span class="peg4 peg4_3">&#9679</span>
+                        <span class="peg3 peg4_2">&#9675</span>
+                        <span class="peg4 peg4_3">&#9675</span>
                     </div> 
                 </td> 
                 <td class="tdPegs tdPegs4">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg3_0">&#9679</span>
-                        <span class="peg2 peg3_1">&#9679</span>
+                        <span class="peg1 peg3_0">&#9675</span>
+                        <span class="peg2 peg3_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg3_2">&#9679</span>
-                        <span class="peg4 peg3_3">&#9679</span>
+                        <span class="peg3 peg3_2">&#9675</span>
+                        <span class="peg4 peg3_3">&#9675</span>
                     </div> 
                 </td>
                 <td class="tdPegs tdPegs3">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg2_0">&#9679</span>
-                        <span class="peg2 peg2_1">&#9679</span>
+                        <span class="peg1 peg2_0">&#9675</span>
+                        <span class="peg2 peg2_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg2_2">&#9679</span>
-                        <span class="peg4 peg2_3">&#9679</span>
+                        <span class="peg3 peg2_2">&#9675</span>
+                        <span class="peg4 peg2_3">&#9675</span>
                     </div> 
                 </td> 
                 <td class="tdPegs tdPegs2">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg1_0">&#9679</span>
-                        <span class="peg2 peg1_1">&#9679</span>
+                        <span class="peg1 peg1_0">&#9675</span>
+                        <span class="peg2 peg1_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg1_2">&#9679</span>
-                        <span class="peg4 peg1_3">&#9679</span>
+                        <span class="peg3 peg1_2">&#9675</span>
+                        <span class="peg4 peg1_3">&#9675</span>
                     </div> 
                 </td>
                 <td class="tdPegs tdPegs1">
                     <div class="tdPegsfirstRow">
-                        <span class="peg1 peg0_0">&#9679</span>
-                        <span class="peg2 peg0_1">&#9679</span>
+                        <span class="peg1 peg0_0">&#9675</span>
+                        <span class="peg2 peg0_1">&#9675</span>
                     </div>
                     <div class="tdPegsSecondRow">
-                        <span class="peg3 peg0_2">&#9679</span>
-                        <span class="peg4 peg0_3">&#9679</span>
+                        <span class="peg3 peg0_2">&#9675</span>
+                        <span class="peg4 peg0_3">&#9675</span>
                     </div> 
                 </td>
                 <td class="tdPegs tdPegs0">
@@ -124,300 +129,300 @@
             <tr class="trCircles trCircles1">
                 <td class= "tdCircles tdCircles11 tdCircles11_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles10 tdCircles10_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles9 tdCircles9_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles8 tdCircles8_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles7 tdCircles7_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles6 tdCircles6_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                  <td class= "tdCircles tdCircles5 tdCircles5_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles4 tdCircles4_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>                
                 <td class= "tdCircles tdCircles3 tdCircles3_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>
                 <td class= "tdCircles tdCircles2 tdCircles2_0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
-                <td class= "tdCircles tdCircles1 tdGuessColumn0">
+                <td class= "tdCircles tdCircles1 tdGuessColumn tdGuessColumn0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>                
                 <td class= "tdCircles tdCircles0 tdRemover0">
                     <div>
-                        <span>x</span>
+                        <div>x</div>
                     </div>
                 </td>
             </tr>    
             <tr class="trCircles trCircles2">
                 <td class= "tdCircles tdCircles11 tdCircles11_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles10 tdCircles10_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles9 tdCircles9_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles8 tdCircles8_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles7 tdCircles7_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles6 tdCircles6_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles5 tdCircles5_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles4 tdCircles4_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>                
                 <td class= "tdCircles tdCircles3 tdCircles3_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>
                 <td class= "tdCircles tdCircles2 tdCircles2_1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
-                <td class= "tdCircles tdCircles1 tdGuessColumn1">
+                <td class= "tdCircles tdCircles1 tdGuessColumn tdGuessColumn1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>            
                 <td class= "tdCircles tdCircles0 tdRemover1">
                     <div>
-                        <span>x</span>
+                        <div>x</div>
                     </div>
                 </td>                
             </tr>            
             <tr class="trCircles trCircles3">
                 <td class= "tdCircles tdCircles11 tdCircles11_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles10 tdCircles10_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles9 tdCircles9_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles8 tdCircles8_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles7 tdCircles7_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles6 tdCircles6_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles5 tdCircles5_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles4 tdCircles4_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>                
                 <td class= "tdCircles tdCircles3 tdCircles3_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>
                 <td class= "tdCircles tdCircles2 tdCircles2_2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
-                <td class= "tdCircles tdCircles1 tdGuessColumn2">
+                <td class= "tdCircles tdCircles1 tdGuessColumn tdGuessColumn2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>            
                 <td class= "tdCircles tdCircles0 tdRemover2">
                     <div>
-                        <span>x</span>
+                        <div>x</div>
                     </div>
                 </td>                
             </tr>            
             <tr class="trCircles trCircles4">
                 <td class= "tdCircles tdCircles11 tdCircles11_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles10 tdCircles10_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles9 tdCircles9_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles8 tdCircles8_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles7 tdCircles7_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles6 tdCircles6_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles5 tdCircles5_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdCircles tdCircles4 tdCircles4_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>                
                 <td class= "tdCircles tdCircles3 tdCircles3_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>
                 <td class= "tdCircles tdCircles2 tdCircles2_3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
-                <td class= "tdCircles tdCircles1 tdGuessColumn3">
+                <td class= "tdCircles tdCircles1 tdGuessColumn tdGuessColumn3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>            
                 <td class= "tdCircles tdCircles0 tdRemover3">
                     <div>
-                        <span>x</span>
+                        <div>x</div>
                     </div>
                 </td>                
             </tr>
             <tr class="trColorPicker">
                 <td class= "tdColorPicker empty">
                     <div>
-                        <span></span>
+                        <div></div>
                     </div>
                 </td>                        
                 <td class= "tdColorPicker tdColorPicker7">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPicker6">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPicker5">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPicker4">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPicker3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>                        
                 <td class= "tdColorPicker tdColorPicker2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPicker1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>                 
                 </td>
                 <td class= "tdColorPicker tdColorPicker0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>
                 <td class= "tdColorPicker empty">
                     <div>
-                        <span></span>
+                        <div></div>
                     </div> 
                 </td>   
                 <td class= "tdColorPicker buttonCheck">
@@ -459,22 +464,22 @@
                 <td></td>
                 <td class="tdGuessColumnSolution0">
                     <div>
-                        <span>&#9679</span>
+                        <span>&#9675</span>
                     </div>                    
                 </td>
                 <td class="tdGuessColumnSolution1">
                     <div>
-                        <span>&#9679</span>
+                        <span>&#9675</span>
                     </div>
                 </td>
                 <td class="tdGuessColumnSolution2">
                     <div>
-                        <span>&#9679</span>
+                        <span>&#9675</span>
                     </div>
                 </td>
                 <td class="tdGuessColumnSolution3">
                     <div>
-                        <span>&#9679</span>
+                        <span>&#9675</span>
                     </div>
                 </td>
             </tr>
@@ -486,47 +491,47 @@
                 </td>                        
                 <td class= "tdColorPicker tdColorPickerSolution7">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPickerSolution6">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPickerSolution5">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPickerSolution4">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPickerSolution3">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>                        
                 <td class= "tdColorPicker tdColorPickerSolution2">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>
                 </td>
                 <td class= "tdColorPicker tdColorPickerSolution1">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div>                 
                 </td>
                 <td class= "tdColorPicker tdColorPickerSolution0">
                     <div>
-                        <span>&#9679</span>
+                        <div>&#9675</div>
                     </div> 
                 </td>
                 <td class= "tdColorPicker empty">
                     <div>
-                        <span></span>
+                        <div></div>
                     </div> 
                 </td>   
                 <td class= "tdColorPicker buttonCheck">
@@ -537,12 +542,6 @@
             </tr>   
         </table>
         </div>
-           
-            <div> <!--footer-->
-                <div> <!--Timer-->
-                    <h4>Time : <a class="min">00</a>:<a class="sec">00</a></h4>
-                </div>                          
-            </div>
         </main>
         <script src="javascripts/ui.js"></script>
         <script src="javascripts/messages.js"></script> <!--Message client-side-->
