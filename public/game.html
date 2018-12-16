@@ -4,14 +4,15 @@
         <meta charset="utf-8" />
         <title>Mastermind - webgame</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">    </head>
     <body>
         <header>
             <div>
                 <h3>Mastermind</h3>
-                <img src="logo.gif" alt="Logo">
-                <button onclick="document.location.href = 'splash.html';"><h3>Log out</h3></button>
+                <!--<img src="logo.gif" alt="Logo">-->
+                <button onclick="document.location.href = 'splash';"><h3>Log out</h3></button>
             </div>
+            <div class="messageBox"></div>
         </header>
         <main>
         <table class="tableMastermind" border="1">
@@ -426,28 +427,126 @@
                 </td>                                             
             </tr>                         
         </table>
-        
+        <table class="tableChoose">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="tdRemoverSolution0">
+                        <div>
+                            <span>x</span>
+                        </div>                    
+                    </td>
+                    <td class="tdRemoverSolution1">
+                        <div>
+                            <span>x</span>
+                        </div>
+                    </td>
+                    <td class="tdRemoverSolution2">
+                        <div>
+                            <span>x</span>
+                        </div>
+                    </td>
+                    <td td="tdRemoverSolution3">
+                        <div>
+                            <span>x</span>
+                        </div>
+                    </td>
+                </tr>            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="tdGuessColumnSolution0">
+                    <div>
+                        <span>&#9679</span>
+                    </div>                    
+                </td>
+                <td class="tdGuessColumnSolution1">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>
+                <td class="tdGuessColumnSolution2">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>
+                <td class="tdGuessColumnSolution3">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="trColorPicker">
+                <td class= "tdColorPicker empty">
+                    <div>
+                        <span></span>
+                    </div>
+                </td>                        
+                <td class= "tdColorPicker tdColorPickerSolution7">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>
+                <td class= "tdColorPicker tdColorPickerSolution6">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>
+                <td class= "tdColorPicker tdColorPickerSolution5">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>
+                <td class= "tdColorPicker tdColorPickerSolution4">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>
+                <td class= "tdColorPicker tdColorPickerSolution3">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>                        
+                <td class= "tdColorPicker tdColorPickerSolution2">
+                    <div>
+                        <span>&#9679</span>
+                    </div>
+                </td>
+                <td class= "tdColorPicker tdColorPickerSolution1">
+                    <div>
+                        <span>&#9679</span>
+                    </div>                 
+                </td>
+                <td class= "tdColorPicker tdColorPickerSolution0">
+                    <div>
+                        <span>&#9679</span>
+                    </div> 
+                </td>
+                <td class= "tdColorPicker empty">
+                    <div>
+                        <span></span>
+                    </div> 
+                </td>   
+                <td class= "tdColorPicker buttonCheck">
+                    <div>
+                        <button class="buttonSolution">Check</button>
+                    </div> 
+                </td>                                             
+            </tr>   
+        </table>
         </div>
            
             <div> <!--footer-->
                 <div> <!--Timer-->
-                    <h4>Time : <a class="min"></a>:<a class="sec"></a></h4>
-                </div>
-                <div> <!--opponent's pegs-->
-                    <div> <!--a row/circles-->
-                        <div>
-                            <span>&#9679</span>
-                            <span>&#9679</span>
-                        </div>
-                        <div>
-                            <span>&#9679</span>
-                            <span>&#9679</span>
-                        </div>
-                    </div>        
-                </div>                           
+                    <h4>Time : <a class="min">00</a>:<a class="sec">00</a></h4>
+                </div>                          
             </div>
         </main>
         <script src="javascripts/ui.js"></script>
+        <script src="javascripts/messages.js"></script> <!--Message client-side-->
+        <script src="javascripts/interactions.js"></script>
         <script src="javascripts/method.js"></script>
     </body>
 </html>
