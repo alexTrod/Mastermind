@@ -88,7 +88,8 @@ function sendGameSolution(){
             }
             else{       //letter = B
                 messageFill("You are the code breaker... The code maker is making the code...");
-         
+            }
+        }
         if (incomingMsg == Messages.gameWonBy) {
             winner = incomingMsg.data;
             if (winner = "A" && letter == "A") {
@@ -106,6 +107,7 @@ function sendGameSolution(){
                  messageFill("You lost!");      
             }
         }
+    
         if(incomingMsg.type == Messages.gameSolutionType){ //handle gameSolution
             gameSolution = incomingMsg.solutionChoice;
             if(letter == "B"){
@@ -120,4 +122,4 @@ function sendGameSolution(){
             timer();
         }
     }
-})(); 
+})();
