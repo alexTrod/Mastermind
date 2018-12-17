@@ -128,7 +128,7 @@ header div{
 }
 
 .cookieLogger{
-    position:absolute;
+    position:relative;
     bottom:0;
     left:0;
 }
