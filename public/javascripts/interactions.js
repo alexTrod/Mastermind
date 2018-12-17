@@ -3,14 +3,14 @@ function messageFill(str){
 }
 
 function enableSolutionPicker(){
-    $(".tableChoose").css("display", "block"); 
+    $(".tableChoose").css("display", "table"); 
 
 }
 function disableSolutionPicker(){
     $(".tableChoose").css("display","none");
 }
 function enableMastermindBoard(){
-    $(".tableMastermind").css("display", "block");
+    $(".tableMastermind").css("display", "table");
 }
 function currentRowPickerSolution(){
     "use strict";
@@ -28,22 +28,22 @@ function colorPickerSolution(c){
     "use strict";
     let curColor = colors[c];
     let curRowPicker = currentRowPickerSolution();
-    console.log("curRowPicker  "+curRowPicker);
-    $(".tdGuessColumnSolution"+curRowPicker).css("color",curColor);
+    console.log($(".tdGuessColumnSolution"+curRowPicker + ">div>div"));
+    $(".tdGuessColumnSolution"+curRowPicker + ">div>span").css("color",curColor);
     gameSolution["color"+curRowPicker] = curColor;
     return true;
 }
 function addClickColorSolution(){
     "use strict";
     for(let i = 0;i<8;i++){ 
-        $(".tdColorPickerSolution"+i).css("color", colors[i]);      
+        $(".tdColorPickerSolution"+i+">div>div").css("color", colors[i]);      
         $(".tdColorPickerSolution"+i).click(function() {
             colorPickerSolution(i);
         });
     }
 }
 function colorRemoverSolution(i){
-    $(".tdGuessColumnSolution"+i).css("color","black");
+    $(".tdGuessColumnSolution"+i+">div>span").css("color","white");
     gameSolution["color"+i] = null;
 }
 function addClickRemoverSolution(){
@@ -60,6 +60,7 @@ function sendGameSolution(){
     }
     return JSON.stringify(Messages.gameSolution);
 }
+
 //Set UP
 (function setup(){
     var socket = new WebSocket("ws://127.0.0.1:2500");
@@ -88,24 +89,9 @@ function sendGameSolution(){
             }
             else{       //letter = B
                 messageFill("You are the code breaker... The code maker is making the code...");
+               
             }
         }
-        if (incomingMsg == Messages.gameWonBy) {
-            winner = incomingMsg.data;
-            if (winner = "A" && letter == "A") {
-                messageFill("You won!");
-            }
-            if (winner = "A" && letter == "A") {
-                messageFill("You lost!");
-            }
-            if (winner = "B" && letter == "B") {
-                messageFill("You won!");
-            }
-            if (winner = "A" && letter == "B") {
-                 messageFill("You lost!");      
-            }
-        }
-    
         if(incomingMsg.type == Messages.gameSolutionType){ //handle gameSolution
             gameSolution = incomingMsg.solutionChoice;
             if(letter == "B"){
@@ -119,10 +105,5 @@ function sendGameSolution(){
             }
             timer();
         }
-    };
-  socket.onclose = function(){
-    if(winner == null){
-       messageFill("Aborted");
     }
-  };
 })();
