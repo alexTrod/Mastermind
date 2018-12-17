@@ -28,10 +28,15 @@ body{
 
 footer{
   position:absolute;
+  width:100%;
   bottom:10px;
-  right:10px;
+  left:0;
   color:white;
   font-family:'Chakra Petch';
+}
+.credits{
+  position:relative;
+  left:0;
 }
 .credits::before{
   content:"Credits : ";
