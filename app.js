@@ -18,7 +18,10 @@ app.get("/", (req, res) => {
     res.sendFile("splash.html", {root: "./public"});
 });
 */
-app.set('view engine', 'ejs')
+
+app.get("/game", indexRouter);
+
+app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     //example of data to render; here gameStatus is an object holding this information
     res.render('splash.ejs', { gamesWonCM : gameStatus.gamesWonCM, gamesWONCB : gameStatus.gamesWONCB, gamesInitialized : gameStatus.gamesInitialized});
@@ -29,7 +32,6 @@ app.get('/splash', (req, res) => {
     res.render('splash.ejs', { gamesWonCM : gameStatus.gamesWonCM, gamesWONCB : gameStatus.gamesWONCB, gamesInitialized : gameStatus.gamesInitialized});
 });
 
-app.get("/game", indexRouter);
 
 var server = http.createServer(app);
 const wss = new websocket.Server({server}, function(){
