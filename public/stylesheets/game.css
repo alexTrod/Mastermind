@@ -132,6 +132,9 @@ header div{
     bottom:0;
     left:0;
 }
-.tdColorPicker:hover, button, .tdRemover0{
+.tdColorPicker:hover, button:hover, .tdRemover0:hover, .fullscreenIcon:hover, .tdRemoverSolution3:hover,
+.tdRemoverSolution2:hover,
+.tdRemoverSolution1:hover,
+.tdRemoverSolution0:hover{
     cursor:pointer;
 }
