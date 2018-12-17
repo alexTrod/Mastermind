@@ -28,6 +28,8 @@ body{
 
 footer{
   position:absolute;
+  display:flex;
+  justify-content:space-between;
   width:100%;
   bottom:10px;
   left:0;
@@ -35,14 +37,16 @@ footer{
   font-family:'Chakra Petch';
 }
 .credits{
-  position:relative;
-  left:0;
+  margin-right:10px;
 }
 .credits::before{
   content:"Credits : ";
 }
 .credits::after{
   content:"Alex and Rowdey";
+}
+.cookieLogger{
+  margin-left:10px;
 }
 .resolution {
   display: none;
