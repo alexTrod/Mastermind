@@ -132,3 +132,6 @@ header div{
     bottom:0;
     left:0;
 }
+.tdColorPicker:hover, button, .tdRemover0{
+    cursor:pointer;
+}
