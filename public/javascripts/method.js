@@ -228,15 +228,11 @@ function fullScreenSet(){
         openFullscreen();
     }
 }
-function createCookie(value)
-{
-  if (days) {
+function createCookie(value){
     var date = new Date();
     date.setTime(date.getTime()+(1000*24*60*60*1000));
-    var expires = "; expires="+date.toGMTString();
-    }
-  else var expires = "";
-  document.cookie = "number="+value+expires+"; path=/";
+    var expires = "; expires="+date.toGMTString();    
+    document.cookie = "number="+value+expires+"; path=/";
 }
 function readCookie(){
   var ca = document.cookie.split(';');
