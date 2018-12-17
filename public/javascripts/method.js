@@ -191,34 +191,29 @@ $(function(){
 })();
 */
 
-
-
-/* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
-/* View in fullscreen */
 function openFullscreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
+  } else if (elem.mozRequestFullScreen) {
     elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+  } else if (elem.webkitRequestFullscreen) { 
     elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+  } else if (elem.msRequestFullscreen) { 
     elem.msRequestFullscreen();
   }
   fullscreen = true;
 }
 
-/* Close fullscreen */
 function closeFullscreen() {
   if (document.exitFullscreen) {
     document.exitFullscreen();
-  } else if (document.mozCancelFullScreen) { /* Firefox */
+  } else if (document.mozCancelFullScreen) {
     document.mozCancelFullScreen();
-  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+  } else if (document.webkitExitFullscreen) {
     document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE/Edge */
+  } else if (document.msExitFullscreen) {
     document.msExitFullscreen();
   }
   fullscreen = false;
@@ -232,4 +227,32 @@ function fullScreenSet(){
     else{
         openFullscreen();
     }
+}
+function createCookie(value)
+{
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime()+(1000*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+    }
+  else var expires = "";
+  document.cookie = "number="+value+expires+"; path=/";
+}
+function readCookie(){
+{
+  var ca = document.cookie.split(';');
+  var nameEQ = "number=";
+  for(var i=0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1, c.length); 
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+   }
+  return null;
+}
+
+function cookieAdder(){
+var cookieLogger = readCookie();
+cookieLogger++;
+createCookie(cookieLogger);
+$(".cookieLogger").text(cookieLogger);
 }
