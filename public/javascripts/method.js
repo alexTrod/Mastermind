@@ -251,8 +251,8 @@ function readCookie(){
 }
 
 function cookieAdder(){
-var cookieLogger = readCookie();
-cookieLogger++;
-createCookie(cookieLogger);
-$(".cookieLogger").text(cookieLogger);
+    var cookieLogger = readCookie();
+    cookieLogger++;
+    createCookie(cookieLogger);
+    $(".spanCookiLogger").text(cookieLogger);
 }
