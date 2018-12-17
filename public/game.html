@@ -7,6 +7,10 @@
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css">    </head>
         <link rel="stylesheet" type="text/css" href="stylesheets/game.css">
     <body>
+        
+        <div class="resolution">
+                Please resize your screen to a minimal width of 1200px.
+        </div>
         <header>
             <div>
                 <h3 class="title">MAΣTERMINΔ</h3>           
@@ -15,7 +19,12 @@
                         <h4><a class="min">00</a>:<a class="sec">00</a></h4>
                     </div>                          
                 </div>                <!--<img src="logo.gif" alt="Logo">-->
-                <button class="buttonLogOut"onclick="document.location.href = 'splash';"><img class="logOut" alt="Log Out" src="images/logOut.png"></button>
+                <div >
+                    <button class="buttonLogOut" onclick="document.location.href = 'splash';"><img class="logOut" alt="Log Out" src="images/logOut.png"></button>
+                    <div class="fullScreenDiv" onclick="fullScreenSet()">
+                        <img src="images/fullIcon.png" alt="fullScreen" class="fullscreenIcon">
+                    </div>
+                </div>
             </div>
         </header>
         <main>
@@ -534,7 +543,7 @@
                         <div></div>
                     </div> 
                 </td>   
-                <td class= "tdColorPicker buttonCheck">
+                <td class="buttonCheck">
                     <div>
                         <button class="buttonSolution">Send</button>
                     </div> 
@@ -542,7 +551,11 @@
             </tr>   
         </table>
         </div>
-        </main>
+        </main>        
+        <footer>
+            <div class="credits">
+            </div>
+        </footer>
         <script src="javascripts/ui.js"></script>
         <script src="javascripts/messages.js"></script> <!--Message client-side-->
         <script src="javascripts/interactions.js"></script>
