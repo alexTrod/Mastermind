@@ -239,7 +239,6 @@ function createCookie(value)
   document.cookie = "number="+value+expires+"; path=/";
 }
 function readCookie(){
-{
   var ca = document.cookie.split(';');
   var nameEQ = "number=";
   for(var i=0; i < ca.length; i++) {
